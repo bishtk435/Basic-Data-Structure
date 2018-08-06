@@ -28,7 +28,7 @@ void Enqueue(int x)     // Function to add an element in the Queue
     r=temp;
 }
 
-void Dequeue()      //  Function to delete an element in the Queue
+void Dequeue()      //  Function to delete an element from the Queue
 {
     if(isEmpty())
     {
@@ -48,7 +48,7 @@ void Dequeue()      //  Function to delete an element in the Queue
     delete(temp);
 }
 
- int f_element()        // Function  that return front of the Queue
+ int f_element()        // Function  that returns front of the Queue
  {
      if(isEmpty())
      {
@@ -65,6 +65,7 @@ void Dequeue()      //  Function to delete an element in the Queue
      else
         return r->data;
  }
+
  void display()     // Function to display Queue
  {
      struct node* temp=f;
@@ -88,7 +89,7 @@ int main()
         Enqueue(value);
     }
     a:
-    cout<<"******Queue*******"<<endl;
+    cout<<"******Queue******"<<endl;
     cout<<"1.Enqueue an  Element"<<endl;
     cout<<"2.Dequeue an Element"<<endl;
     cout<<"3.Front Element"<<endl;
@@ -104,35 +105,35 @@ int main()
                 cout<<"Enter an integer  you want to insert in  your queue: "<<endl;
                 cin>>value;
                 Enqueue(value);
-                cout<<"Press 'y' for more operation or any key for exit"<<endl;
+                cout<<"Press 'y' for more operation or any key to exit"<<endl;
                 cin>>ch;
                 if(ch=='y')
                     goto  a;
                 break;
         case 2:
                 Dequeue();
-                cout<<"Press 'y' for more operation or any key for exit"<<endl;
+                cout<<"Press 'y' for more operation or any key to exit"<<endl;
                 cin>>ch;
                 if(ch=='y')
                     goto  a;
                 break;
         case 3:
                 cout<<f_element()<<endl;
-                cout<<"Press 'y' for more operation or any key for exit"<<endl;
+                cout<<"Press 'y' for more operation or any key to exit"<<endl;
                 cin>>ch;
                 if(ch=='y')
                     goto  a;
                 break;
         case 4:
                 cout<<r_element()<<endl;
-                cout<<"Press 'y' for more operation or any key for exit"<<endl;
+                cout<<"Press 'y' for more operation or any key to exit"<<endl;
                 cin>>ch;
                 if(ch=='y')
                     goto  a;
                 break;
          case 5:
                 display();
-                cout<<"Press 'y' for more operation or any key for exit"<<endl;
+                cout<<"Press 'y' for more operation or any key to exit"<<endl;
                 cin>>ch;
                 if(ch=='y')
                     goto  a;
