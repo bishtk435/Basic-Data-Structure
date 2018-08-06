@@ -9,12 +9,12 @@ struct node
 struct  node *f=NULL;
 struct node *r=NULL;
 
-bool isEmpty()
+bool isEmpty()          // Function to check whether the Queue is empty or not
 {
     return (f==NULL&&r==NULL);
 }
 
-void Enqueue(int x)
+void Enqueue(int x)     // Function to add an element in the Queue
 {
     struct node *temp=new node;
     temp->data=x;
@@ -28,7 +28,7 @@ void Enqueue(int x)
     r=temp;
 }
 
-void Dequeue()
+void Dequeue()      //  Function to delete an element in the Queue
 {
     if(isEmpty())
     {
@@ -48,7 +48,7 @@ void Dequeue()
     delete(temp);
 }
 
- int f_element()
+ int f_element()        // Function  that return front of the Queue
  {
      if(isEmpty())
      {
@@ -58,20 +58,22 @@ void Dequeue()
         return f->data;
  }
 
- int r_element()
+ int r_element()    // Function that returns rear of the Queue
  {
      if(isEmpty())
         return -1;
      else
         return r->data;
  }
- void display()
+ void display()     // Function to display Queue
  {
      struct node* temp=f;
      while(temp!=NULL)
      {
          cout<<temp->data<<" ";
+         temp=temp->next;
      }
+     cout<<endl;
  }
 int main()
 {
@@ -91,6 +93,7 @@ int main()
     cout<<"2.Dequeue an Element"<<endl;
     cout<<"3.Front Element"<<endl;
     cout<<"4. Rear Element"<<endl;
+    cout<<"5.Display Full Queue"<<endl;
     cout<<"Enter your choice"<<endl;
     int choice;
     char ch;
@@ -122,6 +125,13 @@ int main()
                 break;
         case 4:
                 cout<<r_element()<<endl;
+                cout<<"Press 'y' for more operation or any key for exit"<<endl;
+                cin>>ch;
+                if(ch=='y')
+                    goto  a;
+                break;
+         case 5:
+                display();
                 cout<<"Press 'y' for more operation or any key for exit"<<endl;
                 cin>>ch;
                 if(ch=='y')
