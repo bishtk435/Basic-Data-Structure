@@ -15,14 +15,14 @@ class Stack
         void push(int x)
         {
             if(top==max_size-1)
-                cout<<"Stack is full"<<endl;
+                cout<<"Stack Overflow"<<endl;
             else
                 a[++top]=x;
         }
         void pop()
         {
             if(top==-1)
-                    cout<<"Stack is Empty"<<endl;
+                    cout<<"Stack Underflow"<<endl;
             else
                 --top;
         }
