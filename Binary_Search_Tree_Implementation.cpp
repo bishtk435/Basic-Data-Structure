@@ -1,5 +1,5 @@
 /*
-    Simple Tree Implementation
+    Binary Search Tree Implementation
     -> Insertion
     -> Search
 */
